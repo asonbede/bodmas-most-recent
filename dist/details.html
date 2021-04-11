@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/all.js"></script>
+    <title>Details Page</title>
+  </head>
+  <body>
+    <div style="margin: 10px auto; width: 50%" class="select-container">
+      <label for="question-type">Choose question type:</label>
+      <select name="questionType" id="question-type">
+        <option value="all-questions" selected>All questions</option>
+        <option value="correct-questions">Correct questions</option>
+        <option value="incorrect-questions">Incorrect questions</option>
+        <option value="skipped-questions">Skipped questions</option>
+      </select>
+      <span class="detail-number"></span>
+    </div>
+    <div id="show-details"></div>
+    <script>
+      window.onload = function () {
+        const selectContainer = document.querySelector(".select-container");
+
+        const questionTypeSelectBox = document.querySelector("#question-type");
+        let selectStatus = localStorage.getItem("manipulateSelectBox");
+        if (selectStatus === "hide") {
+          selectContainer.style.display = "none";
+        } else {
+          selectContainer.style.display = "block";
+        }
+        const questionNumberSpan = document.querySelector(".detail-number");
+
+        let questionTypeSelectBoxValue =
+          questionTypeSelectBox.options[questionTypeSelectBox.selectedIndex]
+            .value;
+        let detailPara = document.querySelector("#show-details");
+        let details = localStorage.getItem("detailValue");
+        let number = localStorage.getItem("detailValueLength");
+
+        console.log(details, "^^^^^^&&&");
+
+        detailPara.innerHTML = details;
+        questionNumberSpan.innerHTML = number;
+
+        questionTypeSelectBox.addEventListener("change", function () {
+          questionTypeSelectBoxValue =
+            questionTypeSelectBox.options[questionTypeSelectBox.selectedIndex]
+              .value;
+          if (questionTypeSelectBoxValue === "all-questions") {
+            //let detailPara = document.querySelector("#show-details");
+            //scorePara.style.display = "block";
+            details = localStorage.getItem("detailValue");
+            let number = localStorage.getItem("detailValueLength");
+            questionNumberSpan.innerHTML = number;
+
+            // localStorage.setItem(
+            //   "incorrectValueLength",
+            //   incorrectQuestionLength
+            // );
+            //localStorage.setItem("skippedValueLength", skippedQuestionLength);
+
+            detailPara.innerHTML = details;
+          } else if (questionTypeSelectBoxValue === "correct-questions") {
+            // let detailPara = document.querySelector("#show-details");
+            //scorePara.style.display = "block";
+            details = localStorage.getItem("correctValue");
+
+            detailPara.innerHTML = details;
+
+            details = localStorage.getItem("detailValue");
+            let number = localStorage.getItem("correctValueLength");
+            questionNumberSpan.innerHTML = number;
+          } else if (questionTypeSelectBoxValue === "incorrect-questions") {
+            console.log("bedeeee1122");
+            details = localStorage.getItem("incorrectValue");
+            console.log(details, "55555777");
+
+            let number = localStorage.getItem("incorrectValueLength");
+            questionNumberSpan.innerHTML = number;
+
+            detailPara.innerHTML = details;
+          } else {
+            details = localStorage.getItem("skippedValue");
+            console.log(details, "^^^^^^&&&");
+            let number = localStorage.getItem("skippedValueLength");
+            questionNumberSpan.innerHTML = number;
+
+            detailPara.innerHTML = details;
+          }
+        });
+      };
+    </script>
+  </body>
+</html>

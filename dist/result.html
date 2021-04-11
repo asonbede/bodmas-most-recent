@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/all.js"></script>
+    <title>Result Page</title>
+  </head>
+  <body>
+    <div id="show-score" style="display: none"></div>
+
+    <script>
+      //ghgffffff
+      window.onload = function () {
+        let scorePara = document.querySelector("#show-score");
+        scorePara.style.display = "block";
+        let score = localStorage.getItem("resultValue");
+        console.log(score, "^^^^^^&&&");
+
+        scorePara.innerHTML = score;
+      };
+    </script>
+  </body>
+</html>

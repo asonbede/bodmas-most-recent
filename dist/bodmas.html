@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BODMAS Calculation</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!--font awesome -->
+    <script src="js/all.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="control">
+        <a href="#" id="quick-answer">Check Score</a>
+        <a href="#" id="show-working">Show Working</a>
+        <a href="#" id="clean-board">Clean Baord</a>
+        <a href="#" id="new-question">New questions</a>
+        <a href="#" style="cursor: none;" id="numberinput-anchor"
+          >Amount:
+
+          <input
+            type="number"
+            max="100"
+            min="1"
+            step="1"
+            value="2"
+            id="number-input"
+        /></a>
+        <a href="#" style="cursor: none;" id="timecheck-anchor"
+          >Time:<span id="time-check"></span
+        ></a>
+        <a href="bod-mass.html" target="_blank" id="tutorial"> Tutorial</a>
+        <a href="#" id="cal-mode">Go To BODMAS Cal.</a>
+        <a href="#" style="cursor: none;" id="select-level">
+          <label for="cars">Choose a Level:</label>
+          <select name="bodmaslevel" id="bodmss-level">
+            <option value="basic" selected> Basic</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </a>
+        <div class="menu-btn">
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+        </div>
+      </div>
+      <input type="text" id="calc-input" placeholder="Enter your input here." />
+      <div id="buttons">
+        <div class="instructions">
+          <p>
+            <span class="instruction-head"> Instruction:<br /> </span>
+            Simplify the following.
+            <span class="watch-time">You have one minute per question.</span>
+            Click the Check Score button to submit your script for assessment
+            when you are done. However, keep in mind that your script will be
+            collected and marked when the time is up whether you are done or
+            not.<br />Hint: All operators with the same color have equal rank
+            and should be evaluated at the same time.<br />
+            Goodluck.
+          </p>
+        </div>
+
+        <div id="question-options">
+          <!-- <p id="question"></p> -->
+          <!-- <div id="options"></div> -->
+          <!-- <i class="fas fa-check" aria-hidden="true"></i> -->
+        </div>
+      </div>
+      <div id="show-score" style="display: none;"></div>
+      <div id="show-details"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

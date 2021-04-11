@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BODMAS Tutorial</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!--font awesome -->
+    <script src="js/all.js"></script>
+  </head>
+  <body>
+    <div id="bodmas-container">
+      <div class="head-and-content">
+        <p class="bodmas-head">What is BODMAS?</p>
+        <p>
+          BODMAS is an acronym for Brackets, Orders, Division, Multiplication,
+          Addition Subtraction.
+        </p>
+      </div>
+      <div class="head-and-content">
+        <p class="bodmas-head">Of what use is BODMAS?</p>
+        <p>
+          In a mathematical statement or expression involving different
+          operators such as Brackets, Division, Multiplication, Addition,
+          Subtraction, 5+(4-3)-6*4/2+5<sup>2</sup> for instance, BODMAS enables
+          you to remenber which of the operators should be evaluated first. So
+          with BODMAS you can easily recall the order in which to solve
+          mathematical problems.
+        </p>
+      </div>
+      <div class="head-and-content">
+        <p class="bodmas-head">
+          In what order is mathematical problems involving different operators
+          solved?
+        </p>
+        <p>
+          Brackets: calculations inside the bracket are done first.
+          <br />
+          e.g 5+ <span class="redd">(4-3)</span> -6*4/2+5<sup>2</sup> should
+          simplify to 5+<span class="redd">1</span>-6*4/2+5<sup>2</sup><br />
+          Orders: numbers involving powers or square roots or indices or
+          exponents are evaluated next.<br />
+          5+1-6*4/2+<span class="redd">5<sup>2</sup> </span>simplifies to
+          5+1-6*4/2+<span class="redd">25</span><br />
+          Division or Multiplication: you can do division before Multiplication
+          or Multiplication before division, the order in which these two are
+          done does not matter. I normally do division first. It is first on the
+          BODMAS acronym also.<br />
+          5+1-6*<span class="redd">4/2</span>+25 simplifies to 5+1-6*<span
+            class="redd"
+            >2</span
+          >+25<br />
+          And 5+1-<span class="redd">6*2</span>+25 simplifies to 5+1-<span
+            class="redd"
+            >12</span
+          >+25<br />
+          Addition or Subtraction: after brackets have been cleared, numbers
+          involving powers evaluated, multiplication or division done, the next
+          operation is addition or subtraction. As with mutltiplication and
+          division , addition and subtraction can be done in any order. I
+          usually do addition first.<br />
+          <span class="redd">5</span> <span class="redd">+1</span>-12<span
+            class="redd"
+            >+25
+          </span>
+          simplifies to <span class="redd">31</span>-12 . Note that any number
+          not preceeded by a sign such as 5 in this calculation is most likely a
+          positive number.<br />
+          And 31<span class="redd">-12 </span> finally simplifies to
+          <span class="redd"> 19</span>
+        </p>
+      </div>
+      <div class="head-and-content">
+        <p class="bodmas-head">Are there other acronyms similar to BODMAS?</p>
+        <p>
+          Yes! PEMDAS and BIDMAS for instance. They all work like BODMAS<br />
+          PEMDAS stands for: Parentheses-same as brackets, Exponents-same as
+          orders, Multiplication and Division, Addition and Subtraction.<br />
+          In BIDMAS I stands for indices, which is similar to orders.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

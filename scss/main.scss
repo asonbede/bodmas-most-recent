@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e8ecbdd5;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+  width: 100%;
+}
+.exp {
+  display: none;
+}
+/* Style each question and its options */
+.question-and-alloptions {
+  width: 95%;
+  height: auto;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border-bottom: 4px solid #da800b;
+  text-align: left;
+  /* margin-bottom: 10px; */
+  background-color: white;
+  margin: 10px;
+}
+
+/* Style the headings */
+.question-and-alloptions p,
+.captions,
+#report-card {
+  background-color: #76a077;
+  color: white;
+  padding: 4px;
+  font-size: 30px;
+  margin: 0;
+}
+
+/* style the report card */
+#show-score {
+  margin-left: 48%;
+  font-size: 25px;
+  margin-top: 40px;
+  padding: 12px;
+  /* border: 2px solid black; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border-bottom: 4px solid #da800b;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 50%;
+  margin-right: 5%;
+}
+
+/* style the report summary and result details */
+.summary-all,
+.detail-item {
+  margin-left: 48%;
+  padding: 12px;
+  font-size: 25px;
+  /* border: 2px solid black; */
+  margin-bottom: 10px;
+
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  background-color: white;
+  border-bottom: 4px solid #da800b;
+  width: 50%;
+  margin-right: 5%;
+}
+
+.que-num {
+  margin-right: 20px;
+}
+
+// style the question box
+#buttons {
+  width: 45%;
+  height: 80%;
+  position: fixed;
+  top: 90px;
+  overflow: auto;
+  /* background-color: #f1f1f1; */
+  /* border-right: 1px solid #555; */
+  margin: 20px;
+}
+
+//style the question details summary
+.summary-all ~ p {
+  margin-left: 48%;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  margin-right: 5%;
+}
+
+//style the control
+#control {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  width: 100%;
+  /* background-color: aquamarine; */
+
+  padding: 4px;
+  background-color: #76a077;
+  min-height: 30px;
+}
+
+//style the a inside control
+#control a {
+  display: inline-block;
+  color: white;
+  padding: 8px;
+  font-size: 19px;
+  text-decoration: none;
+
+  /* border-right: 2px solid black; */
+}
+
+/* style the menu button */
+#control .menu-btn {
+  float: right;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  z-index: 3;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* style the menu button burger */
+.btn-line {
+  width: 29px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: coral;
+}
+
+/* style the control items on hover */
+#quick-answer:hover {
+  background-color: #c4c4cf;
+}
+
+#show-working:hover {
+  background-color: #c4c4cf;
+}
+#clean-board:hover {
+  background-color: #c4c4cf;
+}
+
+#new-question:hover {
+  background-color: #c4c4cf;
+}
+
+#tutorial:hover {
+  background-color: #c4c4cf;
+}
+#cal-mode:hover {
+  background-color: #c4c4cf;
+}
+
+//-------------------------------------------------------
+// style tutorial headings
+
+.bodmas-container {
+  width: 100%;
+}
+.head-and-content {
+  background-color: white;
+  margin: 3px auto;
+  font-size: 25px;
+  width: 90%;
+  padding: 5px 15px;
+  // font-family: Arial, Helvetica, sans-serif;
+}
+.bodmas-head {
+  font-size: 35px;
+  font-weight: 900;
+  font-style: italic;
+  //background-color: skyblue;
+  color: #76a077; //#fdbac6;
+  padding: 5px;
+  margin: 0;
+}
+.redd {
+  background-color: #fdbac6;
+}
+//--------------------------------------------------------------------------------------------
+
+/* for screens that are 768px and below */
+@media screen and (max-width: 768px) {
+  #buttons {
+    width: 95%;
+    height: auto;
+    position: static;
+    margin-top: 80px;
+    margin-bottom: none;
+    margin: 80px auto 0 auto;
+  }
+  #show-score {
+    margin-top: 4px;
+  }
+  .summary-all,
+  #show-score,
+  .detail-item,
+  .summary-all ~ p {
+    width: 95%;
+    margin: 6px auto;
+  }
+  #calc-input.cal-control {
+    margin-top: 150px;
+  }
+}
+
+/* for screens that are 580px or less */
+@media screen and (max-width: 580px) {
+  #control {
+    width: 100vw;
+  }
+  /* make the menu button burger(3 bars) visible on small screen */
+  #control .menu-btn {
+    visibility: visible;
+  }
+
+  /* select all a control elements on small screens and make them invisible */
+  #control a {
+    /* width: 90%; */
+    display: none;
+    /* padding: 2px; */
+  }
+
+  /* select the clock on small screen and retain the clock on small screen */
+  #new-question + a + a {
+    display: inline-block;
+  }
+
+  #timecheck-anchor.cal-control {
+    display: none;
+  }
+
+  /* select the check answer on small screen and retain it */
+  #control a:nth-child(1) {
+    display: inline-block;
+  }
+
+  #control.cal-control a:nth-child(1) {
+    display: none;
+  }
+  #show-working.cal-control {
+    display: inline-block;
+  }
+
+  /* redisplays the control elements on menu button click */
+  #control .open-control {
+    width: 100%;
+    display: block;
+  }
+
+  #control.open-control {
+    width: 50%;
+    background-color: rgb(118, 160, 119);
+  }
+
+  //#control.cal-control a:nth-child(1):parent
+
+  #quick-answer.cal-control,
+  #new-question.cal-control,
+  #numberinput-anchor.cal-control,
+  #timecheck-anchor.cal-control {
+    display: none;
+  }
+
+  /* Add margin to the first control element */
+  #control a:nth-child(1) {
+    margin-top: 35px;
+  }
+
+  #show-working.cal-control {
+    margin-top: 35px;
+  }
+
+  /* Rotate the menu button */
+  .open-menubtn {
+    transform: rotate(720deg);
+    transition: all 1s;
+  }
+  .open-menubtn .btn-line:nth-child(1) {
+    /* line 1 - rotate */
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .open-menubtn .btn-line:nth-child(2) {
+    /* line 2 - hide */
+    opacity: 0;
+  }
+
+  .open-menubtn .btn-line:nth-child(3) {
+    /* line 3- rotate */
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  #buttons {
+    margin-top: 100px;
+  }
+
+  #control {
+    min-height: 10px;
+  }
+}
+
+.instructions {
+  padding: 8px;
+  font-size: 28px;
+  font-weight: 500;
+}
+.instruction-head {
+  text-align: right;
+  font-size: 40px;
+  color: #da800b;
+  text-transform: capitalize;
+  font-weight: 800;
+  font-style: italic;
+}
+.watch-time {
+  color: #da800b;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* for screens that are 370px or below */
+@media screen and (max-width: 370px) {
+  #new-question + a + a {
+    display: none;
+  }
+}
+
+#quick-answer.cal-control,
+#select-level.cal-control,
+#new-question.cal-control,
+#numberinput-anchor.cal-control,
+#timecheck-anchor.cal-control {
+  display: none;
+}
+#calc-input.cal-control {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 90px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #312c2c; //#f57373;
+  background-color: white// #76a077;
+}
+// .instructions {
+//   display: block;
+// }
+#buttons.cal-control {
+  display: none;
+}
+
+#show-score.cal-control {
+  display: none;
+}
+
+.cal-control .summary-all,
+.cal-control .detail-item,
+.cal-control .summary-all + p {
+  width: 95%;
+  margin: 4px auto;
+}
+//style font awesome
+
+sup {
+  color: #9c059c;
+}

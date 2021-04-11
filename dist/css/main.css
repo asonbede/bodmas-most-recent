@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e8ecbdd5;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  width: 100%;
+}
+
+#work-container {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+}
+.exp {
+  display: none;
+}
+
+/* ----------- Style the main nav bar the topmost --------------*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+/*----------------------------------- style the course select box --------------- */
+
+.content {
+  list-style-type: none;
+  margin-top: 70px;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.content select {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border: 0 0;
+  padding: 8px 8px;
+}
+
+/* Style each question and its options */
+.question-and-alloptions {
+  width: 95%;
+  height: auto;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border-bottom: 4px solid #da800b;
+  text-align: left;
+  /* margin-bottom: 10px; */
+  background-color: white;
+  margin: 10px;
+}
+
+/* Style the headings */
+.question-and-alloptions p,
+.captions,
+#report-card {
+  background-color: #76a077;
+  color: white;
+  padding: 4px;
+  font-size: 30px;
+  margin: 0;
+}
+/* p.captions {
+  margin-left: 0 auto;
+} */
+
+/* style the report card */
+#show-score {
+  margin: 20px auto;
+  font-size: 25px;
+
+  padding: 12px;
+  /* border: 2px solid black; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border-bottom: 4px solid #da800b;
+
+  background-color: white;
+  width: 80%;
+}
+
+/* style the report summary and result details */
+.summary-all,
+.detail-item {
+  margin-left: 3%;
+  padding: 12px;
+  font-size: 25px;
+  /* border: 2px solid black; */
+  margin-bottom: 10px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  background-color: white;
+  /* border-bottom: 4px solid #da800b; */
+  /* width: 50%; */
+  margin-right: 5%;
+}
+
+.que-num {
+  margin-right: 20px;
+}
+
+.summary-all ~ p {
+  margin-left: 3%;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  /* width: 50%; */
+  margin-right: 5%;
+}
+
+#control {
+  position: fixed;
+  overflow: hidden;
+  top: 6px;
+  right: 8px;
+
+  /* background-color: aquamarine; */
+  padding: 4px;
+  background-color: rgba(17, 17, 17, 0.9);
+
+  min-height: 30px;
+  min-width: 30px;
+}
+
+#control a {
+  display: none;
+  color: white;
+  padding: 8px;
+  font-size: 19px;
+  text-decoration: none;
+  /* border-right: 2px solid black; */
+}
+
+/* style the menu button */
+#control .menu-btn {
+  /* float: right; */
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: 3;
+  cursor: pointer;
+  display: inline-block;
+  /* visibility: hidden; */
+}
+
+/* style the menu button burger */
+.btn-line {
+  width: 29px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: coral;
+}
+
+/* style the control items on hover */
+#quick-answer.open-control:hover {
+  background-color: #5858e0;
+}
+
+#show-working.open-control:hover {
+  background-color: #5858e0;
+}
+
+#clean-board.open-control:hover {
+  background-color: #5858e0;
+}
+
+#new-question.open-control:hover {
+  background-color: #5858e0;
+}
+
+#tutorial.open-control:hover {
+  background-color: #5858e0;
+}
+
+#cal-mode.open-control:hover {
+  background-color: #5858e0;
+}
+/* ------------ Tutorial page style --------- */
+.bodmas-container {
+  width: 100%;
+}
+
+.head-and-content {
+  background-color: white;
+  margin: 3px auto;
+  font-size: 25px;
+  width: 90%;
+  padding: 5px 15px;
+}
+
+.bodmas-head {
+  font-size: 35px;
+  font-weight: 900;
+  font-style: italic;
+  color: #76a077;
+  padding: 5px;
+  margin: 0;
+}
+
+.redd {
+  background-color: #fdbac6;
+}
+
+.red-color {
+  color: red;
+}
+
+.green-color {
+  color: green;
+}
+
+/* select the check answer on small screen and retain it */
+#control a:nth-child(1) {
+  margin-top: 40px;
+}
+
+#control.open-control a {
+  width: 100%;
+  display: block;
+  background-color: #76a077;
+  border: 2px solid #76a077;
+}
+
+#control.open-control {
+  width: 40%;
+}
+
+.open-menubtn {
+  transform: rotate(720deg);
+  transition: all 1s;
+}
+.open-menubtn .btn-line:nth-child(1) {
+  /* line 1 - rotate */
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.open-menubtn .btn-line:nth-child(2) {
+  /* line 2 - hide */
+  opacity: 0;
+}
+.open-menubtn .btn-line:nth-child(3) {
+  /* line 3- rotate */
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+#buttons {
+  margin-top: 100px;
+  width: 100%;
+}
+
+#quick-answer.cal-control.open-control,
+#select-level.cal-control.open-control,
+#new-question.cal-control.open-control,
+#numberinput-anchor.cal-control.open-control,
+#timecheck-anchor.cal-control.open-control,
+#clean-board.cal-control.open-control {
+  display: none;
+}
+
+#calc-input {
+  display: none;
+}
+#calc-input.cal-control,
+#search-input {
+  display: block;
+  width: 90%;
+
+  height: 40px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #312c2c;
+  background-color: white;
+}
+
+.cal-control .summary-all,
+.cal-control .detail-item,
+.cal-control .summary-all + p {
+  width: 95%;
+  margin: 4px auto;
+}
+
+sup {
+  color: #9c059c;
+}
+.skipp-blue {
+  color: blue;
+}
+
+.progress-container {
+  width: 40%;
+  position: fixed;
+  top: 10%;
+  margin-bottom: 18px;
+}
+
+/* Media queries */
+/* On screens that are 600px wide or less, make the content div span the entire screen */
+@media screen and (max-width: 600px) {
+  .content {
+    height: auto;
+    width: 100%;
+    position: static;
+  }
+
+  #work-container {
+    margin-left: 3px;
+    padding: 1px 16px;
+    height: auto;
+    width: 100%;
+  }
+  .progress-container {
+    top: 40%;
+    width: 70%;
+  }
+}
